@@ -59,10 +59,13 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 ## Pantalla principal en donde se encuentra toda la información de los productos 
 <img width="925" height="490" alt="image" src="https://github.com/user-attachments/assets/5a7e2a23-a1bc-49f1-81c5-4479e55c0b54" />
+
 ## Pantalla para agregar un nuevo producto al inventario
 <img width="925" height="470" alt="image" src="https://github.com/user-attachments/assets/f1b1da49-92fc-4395-83fb-b2fd8fc73578" />
+
 ## Se muestra que ya aparece en la lista principal el producto agregado anteriormente y que se elimino un producto
 <img width="921" height="411" alt="image" src="https://github.com/user-attachments/assets/d93bfe9b-4730-4638-bdee-48880cc21000" />
+
 ## Pantalla se opcion de editar la información del producto
 <img width="925" height="481" alt="image" src="https://github.com/user-attachments/assets/59c2796b-e3eb-460c-bfcb-99c6b07f6fc0" />
 
