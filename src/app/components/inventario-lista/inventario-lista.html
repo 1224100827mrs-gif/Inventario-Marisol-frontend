@@ -1,0 +1,41 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="h4 text-secondary m-0">Control de Inventario</h2>
+    <a routerLink="/nuevo" class="btn btn-outline-secondary btn-sm"> Agregar Producto</a>
+  </div>
+
+  <table class="table table-sm table-hover align-middle">
+    <thead class="table-light">
+      <tr>
+        <th class="text-muted fw-normal">ID</th>
+        <th class="text-muted fw-normal">Nombre</th>
+        <th class="text-muted fw-normal">Categoría</th>
+        <th class="text-muted fw-normal">Precio</th>
+        <th class="text-muted fw-normal">Stock</th>
+        <th class="text-muted fw-normal">Estado</th>
+        <th class="text-muted fw-normal">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of productos">
+        <td class="text-secondary">{{ p.id }}</td>
+        <td class="fw-medium text-dark">{{ p.nombreProducto }}</td>
+        <td class="text-secondary">{{ p.categoria }}</td>
+        <td class="text-secondary">{{ p.precio | currency }}</td>
+        <td class="text-secondary">{{ p.stock }}</td>
+        <td>
+          <span class="small fw-semibold" [ngClass]="p.activo ? 'text-success' : 'text-muted'">
+            {{ p.activo ? 'Activo' : 'Inactivo' }}
+          </span>
+        </td>
+        <td>
+          <a [routerLink]="['/editar', p.id]" class="btn btn-link btn-sm text-decoration-none text-primary p-0 me-3">Editar</a>
+          <button (click)="eliminarProducto(p.id)" class="btn btn-link btn-sm text-decoration-none text-secondary p-0">Eliminar</button>
+        </td>
+      </tr>
+      <tr *ngIf="productos.length === 0">
+        <td colspan="7" class="text-center text-muted py-4 small">No hay productos registrados.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
